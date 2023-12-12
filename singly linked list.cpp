@@ -123,7 +123,8 @@ node *SLL::searchnode(int item)
 }
 void SLL::insertAtStarting(int item)
 {
-    node n = new node;
+    node *n;
+    n = new node;
     n->item = item;
     n->next = start;
     start = n;

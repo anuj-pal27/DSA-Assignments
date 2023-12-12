@@ -51,9 +51,9 @@ void array::sortArray(int arr[], int size)
     int i, j;
     for (i = 0; i < size; i++)
     {
-        for (j = i + 1; j < size; j++)
+        for (j = i+1 ;j < size; j++)
         {
-            if (arr[i] > arr[j])
+            if (arr[i] < arr[j])
             {
                 temp = arr[i];
                 arr[i] = arr[j];
@@ -90,11 +90,4 @@ void array::smallValue(int arr[], int size)
     }
     cout << max << endl;
 }
-int main()
-{
-    int arr[9] = {1, 2, 2, 3, 4, 4, 4, 5, 5};
-    int size = 9;
 
-    array obj;
-    obj.duplicateRemove(arr, size);
-}
