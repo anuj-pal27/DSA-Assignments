@@ -1,20 +1,20 @@
 #include<iostream>
 #include<stdio.h>
 using namespace std;
-void even(int ,int );
+void cube(int);
 int main(){
-    int n=2,i;
+    int n;
     cout<<"Enter the no ";
-    cin>>i;
-    even(n,i);
+    cin>>n;
+    cube(n);
     return 0;
 }
-void even(int n,int i){
+void cube(int n){
    
-    if(n>i)
+    if(n==0)
         return ;
     else{
-        cout<<n<<" ";
-        even(n+2,i);
+        cout<<n*n*n<<" ";
+        cube(n-1);
     }    
 }

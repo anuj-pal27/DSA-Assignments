@@ -14,7 +14,7 @@ void even(int n,int i){
     if(n>i)
         return ;
     else{
-        cout<<n<<" ";
-        even(n+2,i);
+        cout<<i<<" ";
+        even(n,i-2);
     }    
 }

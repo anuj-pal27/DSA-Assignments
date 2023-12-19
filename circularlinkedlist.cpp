@@ -1,11 +1,12 @@
 #include <iostream>
+#include<stdio.h>
 using namespace std;
-
 struct node
 {
     int item;
     node *next;
-} class CLL
+};
+class CLL
 {
 private:
     node *last;
@@ -19,7 +20,8 @@ public:
     void deletefirst();
     void deletelast();
     void deleteNode(node *);
-} CLL::CLL()
+};
+ CLL::CLL()
 {
     last = NULL;
 }
