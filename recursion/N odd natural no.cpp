@@ -9,12 +9,19 @@ int main(){
     odd(n,i);
     return 0;
 }
-void odd(int n,int i){
-   
-    if(n>i)
+void odd(int n,int i){                
+    if(i==0)
         return ;
     else{
         cout<<n<<" ";
+        i--;
         odd(n+2,i);
     }    
 }
+
+// void odd(int n){
+//     if(n > 0){
+//         odd(n-1);
+//         cout<<" "<<2*(n-1);
+//     }
+// }
