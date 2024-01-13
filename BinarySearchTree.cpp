@@ -5,6 +5,7 @@ struct node
     int item;
     node *left;
     node *right;
+    int height;
 };
 
 class BST
@@ -17,6 +18,7 @@ protected:
     void inorderrec(node *);
     void postorderrec(node *);
     node *deleteNode(node *, int);
+ 
 
 public:
     BST();
@@ -27,8 +29,10 @@ public:
     void postorder();
     void del(int);
     node *search(int);
+    int balancefactor(node* );
     ~BST();
 };
+
 node *BST::search(int data)
 {
     node *ptr = root;
@@ -74,13 +78,16 @@ node *BST::deleteNode(node *ptr, int data)
         node *pred, *parpred;
         parpred = ptr;
         pred = ptr->left;
-        while (pred->right != NULL)
+        while(pred->right != NULL)
         {
             parpred = pred;
             pred = pred->right;
         }
-        ptr->item = pred->item;
-        parpred->right = deleteNode(pred, pred->item);
+        ptr->item=pred->item;
+        if(parpred->right==pred)
+            parpred->right=deleteNode(pred, pred->item);
+        else if(parpred->left==pred)
+            parpred->left=deleteNode(pred,pred->item);
     }
     return ptr;
 }
@@ -204,12 +211,13 @@ int main()
     tree.inserting(30);
     tree.inserting(60);
     tree.inserting(70);
-    tree.inorder();
-    tree.del(90);
-    cout << endl;
-    tree.inorder();
-    cout << endl;
-    tree.search(30);
+    // tree.inorder();
+    // tree.del(90);
+    // cout << endl;
+    // tree.inorder();
+    // cout << endl;
+    node*ptr =tree.search(90);
+    cout<<tree.balancefactor(ptr);
 
     return 0;
 }
