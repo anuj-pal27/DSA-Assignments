@@ -104,6 +104,7 @@ void array::delElement(int index)
         for (int i = index; i < lastIndex; i++)
         {
             ptr[i] = ptr[i + 1];
+            cout<<ptr[i];
         }
         lastIndex = -1;
     }

@@ -91,3 +91,7 @@ void array::smallValue(int arr[], int size)
     cout << max << endl;
 }
 
+int main(){
+
+    return 0;
+}

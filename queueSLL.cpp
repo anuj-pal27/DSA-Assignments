@@ -90,8 +90,8 @@ void queue::inserting(int data)
     }
 }
 
-int main()
-{
+// int main()
+// {
 
-    return 0;
-}
+//     return 0;
+// }

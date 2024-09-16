@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 using namespace std;
+
 class queue
 {
 private:
@@ -130,15 +131,15 @@ int queue::frontView()
     cout << "\n Queue is Empty";
     return -1;
 }
-int main()
-{
-    queue obj(5);
-    obj.insertion(10);
-    obj.insertion(20);
-    obj.insertion(30);
-    obj.insertion(40);
-    obj.insertion(50); 
-    obj.deletion();obj.deletion();obj.deletion();obj.deletion();obj.deletion();obj.deletion();
-    cout<<obj.frontView()<<endl;
-    cout << obj.rearView() << endl;
-}
+// int main()
+// {
+//     queue obj(5);
+//     obj.insertion(10);
+//     obj.insertion(20);
+//     obj.insertion(30);
+//     obj.insertion(40);
+//     obj.insertion(50); 
+//     obj.deletion();obj.deletion();obj.deletion();obj.deletion();obj.deletion();obj.deletion();
+//     cout<<obj.frontView()<<endl;
+//     cout << obj.rearView() << endl;
+// }

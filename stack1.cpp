@@ -62,18 +62,19 @@ if(isEmpty()){
 }
 else{   
     delElement(countElement()-1);
+    
 }
 }
-int main(){
-    stack s(5);
-    s.push(20);
-    s.push(20);
-    s.push(30);
-    s.push(40);
-    s.push(70);
-    cout<<endl<<s.peek();
-    reverseStack(s);
-    cout<<endl<<s.peek();
-    cout<<endl;
-    return 0;
-}
+// int main(){
+//     stack s(5);
+//     s.push(20);
+//     s.push(20);
+//     s.push(30);
+//     s.push(40);
+//     s.push(70);
+//     cout<<endl<<s.peek();
+//     reverseStack(s);
+//     cout<<endl<<s.peek();
+//     cout<<endl;
+//     return 0;
+// }

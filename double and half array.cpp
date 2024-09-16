@@ -16,7 +16,7 @@ public:
     void inserElement(int, int);
     void deleteElement(int);
     void count();
-    int capacity();
+    int getcapacity();
     bool isEmpty();
 
     void halfarray()
@@ -47,7 +47,8 @@ bool Array::isEmpty()
 {
     return lastIndex == -1;
 }
-int Array::capacity()
+
+int Array::getcapacity()
 {
     return capacity;
 }
